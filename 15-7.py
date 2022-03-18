@@ -1,14 +1,11 @@
 '''
-
+Напишите программу, которая в последовательности натуральных чисел определяет сумму трёхзначных чисел, кратных 4.
+Программа получает на вход натуральные числа, количество введённых чисел неизвестно, последовательность чисел заканчивается числом 0.
 '''
-a = int(input())
-summa, count = 0, 0
-while a != 0:
-    if 9 < a < 100:
-        summa += a
-        count += 1
-    a = int(input())
-if count > 0:
-    print(round(summa / count, 1))
-else:
-    print('NO')
+number = int(input())
+summa = 0
+while number != 0:
+    if 99 < number < 1000 and number % 4 == 0:
+        summa += number
+    number = int(input())
+print(summa)
